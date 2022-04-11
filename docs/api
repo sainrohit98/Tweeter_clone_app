@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "d83c6cb7-652f-4b5f-b7f2-7adff32affc7",
+		"name": "Tweeter API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Post data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/posts/get_data?location=POINT(-33.9034 152.73457)&page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"posts",
+						"get_data"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "POINT(-33.9034 152.73457)"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Tweet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "text",
+							"value": "chek",
+							"type": "default"
+						},
+						{
+							"key": "location",
+							"value": "POINT(-33.9034 152.73457)",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/posts/tweet",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"posts",
+						"tweet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Weather Report",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "city",
+							"value": "noida",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/weather/report?lat=19.0760&lon=72.8777",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"weather",
+						"report"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "19.0760"
+						},
+						{
+							"key": "lon",
+							"value": "72.8777"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
